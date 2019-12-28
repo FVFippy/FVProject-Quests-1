@@ -48,7 +48,7 @@ sub EVENT_ITEM {
 	}
 	#:: Turn in for 13873 - Sack of Sharkskins
 	elsif (plugin::takeItems(13873 => 1 )) {
-		quest::say("Thanks for the hard work, here is a shield to help you in your duties.");
+		quest::say("Fantastic work, my young knight. Here is a small token of my appreciation -- a fine Sharkskin Shield. It should serve you well in battle.");
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
