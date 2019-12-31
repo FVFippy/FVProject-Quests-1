@@ -14,6 +14,14 @@ sub EVENT_ITEM {
 		#:: Give item 18818 - a tattered flier
 		quest::summonitem(13540);
 	}
+	#:: Turn in for 18820 - sealed letter
+	if (plugin::takeItems(18820 => 1 )) {
+		quest::say("I am afraid I have some bad news, Steel Warrior. I had one of my workers take the raw blades out to be engraved by the Rivervale craftsmen. On his return, he was killed by the orcs in the Commonlands. The orcs now have the blades in their possession. I believe they have a camp nearby in the Commonlands. You may still be able to find all four blades within their camp and return them to Larn Brugal. Good Luck.");
+		#:: Ding!
+		quest::ding();
+		#:: Grant a small amount of experience
+		quest::exp(100);
+	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
 }	
