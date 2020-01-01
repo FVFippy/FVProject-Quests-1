@@ -14,9 +14,25 @@ sub EVENT_ITEM {
 		#:: Give item 18818 - a tattered flier
 		quest::summonitem(13540);
 	}
+	#:: Turn in for 13919 - reward raw short Sword
+	if (plugin::takeItems(13919 => 1 )) {
+		quest::say("I heard you were on your way back. Here, then. Let us sharpen that blade for you. There you are. That should be much better in a fray now.");
+		#:: Give item 5418- Groflah's Stoutbite
+		quest::summonitem(5418);
+		#:: Ding!
+		quest::ding();
+		#:: Give a small amount of experience
+		quest::exp(500);
+		#:: Set factions
+		quest::faction(229,10); #:: + Coalition of Tradefolk
+		quest::faction(336,10); #:: + Coalition of Tradefolk Underground
+		quest::faction(291,7); 	#:: + Merchants of Qeynos
+		quest::faction(281,10); #:: + Knights of Truth
+		
+	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
-}	
+}
 
 sub EVENT_DEATH_COMPLETE {
 	quest::say("The good people of this city will know of this. They will strike back at you!");
