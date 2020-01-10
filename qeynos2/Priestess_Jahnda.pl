@@ -17,7 +17,7 @@ sub EVENT_SAY {
 	elsif ($text=~/blessed oil/i) {
 		quest::say("I do not distribute the blessed oil of life. Please speak with Nomsoe Jusagta. Tell Nomsoe that Brother Estle needs the blessed oil.");
 	}
-	elsif ($text=~/hayle mool/i) {
+	elsif ($text=~/hayle/i) {
 		#:: Removed quest text for Plains of Karana / Splitpaw clan--no response found
 		quest::say("Brother Hayle Mool is one of our finest clerics. He could convert anyone to the ways of Rodcet Nife. Recently, he has been out in the Plains of Karana trying to befriend Splitpaw clan. I pray he has not become their prisoner or even worse, their dinner.");
 	}
