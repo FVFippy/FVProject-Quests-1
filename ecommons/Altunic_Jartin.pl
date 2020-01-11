@@ -36,7 +36,9 @@ sub EVENT_ITEM {
 		#:: Set factions
 		quest::faction(330, -1);	#:: - Freeport Militia
 		quest::faction(311, 1);		#:: + Steel Warriors
-		quest::faction(281, 1);		#:: + Knights of Truth
+		quest::faction(281, 5);		#:: + Knights of Truth
+		quest::faction(271, -1);	#:: - Dismal Rage
+		quest::faction(362, 1);		#:: + Priests of Marr
 		#:: Create a hash for storing cash - 1 to 10cp
 		my %cash = plugin::RandomCash(1,10);
 		#:: Grant a random cash reward
@@ -51,8 +53,10 @@ sub EVENT_ITEM {
 		quest::ding();
 		#:: Set factions
 		quest::faction(330, -1);	#:: - Freeport Militia
-		quest::faction(311,1);		#:: + Steel Warriors
-		quest::faction(281,1);		#:: + Knights of Truth
+		quest::faction(311, 1);		#:: + Steel Warriors
+		quest::faction(281, 5);		#:: + Knights of Truth
+		quest::faction(271, -1);	#:: - Dismal Rage
+		quest::faction(362, 1);		#:: + Priests of Marr
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
